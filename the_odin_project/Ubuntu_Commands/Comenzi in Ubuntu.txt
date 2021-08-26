@@ -1,0 +1,10 @@
+cd - change directory
+cd .. - up 1 directory
+mkdir - make directory
+touch - create a new file
+tab - auto-complete directory names
+mv a b - renames a into b
+
+https://files.fosswire.com/2007/08/fwunixref.pdf
+
+nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8

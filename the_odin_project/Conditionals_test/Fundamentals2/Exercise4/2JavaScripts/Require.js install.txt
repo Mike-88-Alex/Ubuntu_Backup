@@ -1,0 +1,3 @@
+javascript require is not defined
+
+https://sebhastian.com/javascript-require-is-not-defined/

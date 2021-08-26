@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Allowance updater example</title>
+  </head>
+  <body>
+    <label for="shopping-check">Has the shopping been done? </label>
+    <input type="checkbox" id="shopping-check">
+    <select id="allowance">
+        <option value="Did">Did go shopping</option>
+        <option value="Didnt">Didn't go shopping</option>
+        <option value="Choice">Choose</option>
+    </select>
+
+    <p class="shopping"></p>
+    <button class="btn" onclick="myFunction1()">Show/Hide</button>
+    <p class="txt" id="txt1">Ceva</p>
+
+    <script>
+      const checkBox = document.querySelector('input');
+      const select = document.querySelector('#allowance');
+      const para = document.querySelector('.shopping');
+      const btn = document.querySelector('.btn');
+      const text1 = document.querySelector('.txt');
+      let shoppingDone = false;
+      
+      /*
+      checkBox.addEventListener('change',function() {
+        checkBox.disabled = true;
+        shoppingDone = true;
+        updateAllowance();
+      });
+      */
+
+
+      /*
+      checkBox.addEventListener('change',function() {
+        if (checkBox.checked === true) {
+          shoppingDone = true;
+          updateAllowance();
+        }
+        else if (checkBox.checked === false) {
+          shoppingDone = false;
+          updateAllowance();
+        }
+      });
+      */
+
+
+      /*                         // .onclick for button click
+      btn.onclick = function() { // modificare text
+      //function myFunction1() {
+        let text2 = document.getElementsByClassName("txt")[0].innerHTML;
+        document.getElementsByClassName("txt")[0].innerHTML = text2.replace("Ceva", "Altceva");
+      }
+      */
+
+      
+      /*
+      btn.onclick = function() { // modificare text cu hide/show
+      //  const text1 = document.querySelector('.txt'); // optional aici
+      let modify = document.getElementsByClassName("txt")[0].innerHTML;
+      
+        if (text1.style.display === "none") {
+          document.getElementsByClassName("txt")[0].innerHTML = modify.replace("Ceva" , "Altceva");
+          text1.style.display = "block"; // show
+        }
+        else {
+          text1.style.display = "none"; // hide
+        }
+      }
+      */
+
+      
+      checkBox.onchange = function() { // .onchange for tick/checked
+        if (checkBox.checked === true) {
+          shoppingDone = true;
+          updateAllowance();
+        }
+        else if (checkBox.checked === false) {
+          shoppingDone = false;
+          updateAllowance();
+        }
+        else {
+          checkBox.checked = false;
+        }
+      }
+      
+
+
+      select.onchange = function() {  // .onchange for dropdown
+        if (select.value === "Did") {
+          shoppingDone = true;
+          updateAllowance();
+        }
+        else if (select.value === "Didnt") {
+          shoppingDone = false;
+          updateAllowance();
+        }
+        else {
+            para.textContent = '';
+        }
+      }
+
+
+      function updateAllowance() {
+        if(shoppingDone === true) {
+          var childsAllowance = 10;
+        } else {
+          var childsAllowance = 5;
+        }
+
+        para.textContent = 'Child has earned $' + childsAllowance + ' this week.';
+      }
+
+      //updateAllowance(); // optional
+    </script>
+  </body>
+</html>

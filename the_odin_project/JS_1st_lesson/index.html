@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  
+  <button id="OnOff">Start machine</button>
+  <button class="nume">Name</button>
+  <p>The machine is stopped.</p>
+  
+  <button onclick="myFunction1()">Replace Microsoft</button>
+  <p id="demo1">Plase visit Microsoft and Microsoft</p>
+
+  <button onclick="myFunction2()">Replace Blue</button>
+  <p id="demo2">Mr Blue has a blue house and a blue car.</p>
+
+  <button onclick="myFunction3()">Day / Evening</button>
+  <p id="demo3">Good Evening!</p>
+
+  <script>
+    // Your JavaScript goes here!
+    
+    console.log("Hello, World!");
+    let a = "Mike;";
+    let b
+    console.log(`I am ${a}`);
+    console.log(`I am ${"name"}`);
+    console.log("I am 'Mike'");
+    console.log(b);
+    
+    let shoppingDone = false;
+    let childsAllowance;
+
+    if (shoppingDone) { // don't need to explicitly specify '=== true'
+      childsAllowance = 10;
+      console.log(childsAllowance) ;
+    } else {
+      childsAllowance = 5;
+      console.log(childsAllowance);
+    }
+
+    
+    const btn = document.querySelector('#OnOff');
+    const txt = document.querySelector('p');
+    
+   // btn.addEventListener('click', updateBtn);
+    
+      btn.onclick = updateBtn;
+   // btn.onclick = function() {
+      function updateBtn() {
+      if (btn.textContent === 'Start machine') {
+        btn.textContent = 'Stop machine';
+        txt.textContent = 'The machine has started!';
+      } else {
+        btn.textContent = 'Start machine';
+        txt.textContent = 'The machine is stopped.';
+      }
+    }
+    
+
+
+    
+    const button = document.querySelector('.nume');
+    
+    button.onclick = function() {
+      let name = prompt('What is your name?');
+      console.log('Hello ' + name + ', nice to see you!');
+    }
+
+
+    /*
+    function myFunction1() {
+      let text = document.getElementById("demo1").innerHTML;
+    //  document.getElementById("demo1").innerHTML = text.replace(/Microsoft/g,"W3Schools");
+      document.getElementById("demo1").innerHTML = text.replace("Microsoft","W3Schools");
+    }
+    */
+
+
+    /*
+     // .includes() function
+    function myFunction1() {
+        while (document.getElementById("demo1").innerHTML.includes("Microsoft")) {
+          document.getElementById("demo1").innerHTML = document.getElementById("demo1").innerHTML.replace("Microsoft","W3Schools");
+        }
+    }
+    */
+
+
+    /*
+    function myFunction1() {  // replaceAll
+      let text = document.getElementById("demo1").innerHTML;
+    //  document.getElementById("demo1").innerHTML = text.replace(/Microsoft/g,"W3Schools");
+      document.getElementById("demo1").innerHTML = text.replaceAll("Microsoft","W3Schools");
+    }
+    */
+
+    
+    /*
+    function myFunction() {
+      let text = document.getElementById("demo1").innerHTML;
+      // This goes to your DOM, finds an element with id demo and then get's the HTML inside it 
+      // and stores it into text. The variable text just has the HTML, it is no longer in any way 
+      // linked with your DOM
+      text = text.replace("Microsoft","W3Schools");
+      // this replaces the text and stores it again into text
+      document.getElementById("demo").innerHTML = text;
+      // This goes to your DOM, finds again the element with id demo and the changes its innerHTML
+      // to text
+    }
+    */
+
+    /*
+    function myFunction2() {
+      let str = document.getElementById("demo2").innerHTML; 
+      let res = str.replace(/blue|house|car/gi, function (x) {
+        return x.toUpperCase();
+      });
+      document.getElementById("demo2").innerHTML = res;
+    }
+    */
+
+    
+    function myFunction2() { // accessing DOM multiple times to replace multiple words
+      let str = document.getElementById("demo2").innerHTML; 
+    //  let res = str.replace(/blue|house|car/gi, "Mike");
+      str = str.replace("Blue", "Mike");
+      str = str.replace("blue", "nice");
+      str = str.replace("car", "bike");
+      document.getElementById("demo2").innerHTML = str;
+    //  document.getElementById("demo2").innerHTML = document.getElementById("demo2").innerHTML.replace("Blue", "Mike");
+    //  document.getElementById("demo2").innerHTML = document.getElementById("demo2").innerHTML.replace("blue", "nice");
+    //  document.getElementById("demo2").innerHTML = document.getElementById("demo2").innerHTML.replace("car", "bike");
+    }
+    
+    function myFunction3() {
+      if (new Date().getHours() < 18 && new Date().getHours() > 12) {
+        document.getElementById("demo3").innerHTML = "Good Day";
+      }
+      else if (new Date().getHours() < 12) {
+        document.getElementById("demo3").innerHTML = "Good Morning";
+      }
+      else {
+        document.getElementById("demo3").innerHTML = "Good Evening";
+      }
+    }
+    
+
+    /*
+    let login = prompt("Who's there?");
+    if (login === "" || login === null) {
+      alert("Canceled");
+    }
+    else if (login !== "Admin") {
+      alert("I don't know you");
+    }
+    else if (login === "Admin") {
+      let pass = prompt("Password?");
+      if (pass === "" || pass === null) {
+        alert("canceled");
+      }
+      else if (pass !== "TheMaster") {
+        alert("Wrong password");
+      }
+      else if (pass === "TheMaster") {
+        alert("Welcome")
+      }
+    }
+    */
+
+
+  </script>
+</body>
+</html>

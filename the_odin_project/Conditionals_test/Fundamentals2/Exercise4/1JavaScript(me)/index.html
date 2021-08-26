@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ternary operator (?)</title>
+  </head>
+  <body>
+    <script>
+      const birthYear = 1947;
+      const thisYear = 1965;
+      const firstName = "Carlos";
+      const lastName = "Stevenson";
+      const fullName = firstName + " " + lastName;
+      const age = thisYear - birthYear;
+
+      const greeting = "Hello! My name is " + fullName + " and I am " + age + " years old.";
+
+      console.log(greeting);
+
+      list = {
+        testGroup: "b",
+        greeting,
+        birthYear,
+        thisYear,
+        firstName,
+        lastName,
+        fullName,
+        age
+      }
+
+
+
+      let errored = false;
+
+      console.log("\n---------------------------------\n\n")
+
+      /*
+      if(values.testGroup === "a") {
+        if(values.birthYear !== 1948) {
+          console.error(`birthYear is incorrect, it's currently: "${values.birthYear}"`);
+          errored = true;
+        }
+        
+        if(values.thisYear !== 1965) {
+          console.error(`thisYear is incorrect, it's currently: "${values.thisYear}"`);
+          errored = true;
+        }
+        
+        if(values.firstName !== "Carlos") {
+          console.error(`firstName is incorrect, it's currently: "${values.firstName}"`);
+          errored = true;
+        }
+        
+        if(values.lastName !== "Stevenson") {
+          console.error(`lastName is incorrect, it's currently: "${values.lastName}"`);
+          errored = true;
+        }
+        
+        if(values.greeting !== "Hello! My name is Carlos Stevenson and I am 17 years old.") {
+          console.error(`greeting is incorrect, it's currently: "${values.greeting}"`);
+          errored = true;
+        }
+      }
+      */
+
+      if(list.testGroup === "b") {
+        if(list.birthYear !== 1948) {
+          console.error(`birthYear is incorrect, it's currently: "${list.birthYear}"`);
+          errored = true;
+        }
+        
+        if(list.thisYear !== 1965) {
+          console.error(`thisYear is incorrect, it's currently: "${list.thisYear}"`);
+          errored = true;
+        }
+        
+        if(list.firstName !== "Carlos") {
+          console.error(`firstName is incorrect, it's currently: "${list.firstName}"`);
+          errored = true;
+        }
+        
+        if(list.lastName !== "Stevenson") {
+          console.error(`lastName is incorrect, it's currently: "${list.lastName}"`);
+          errored = true;
+        }
+
+        if(list.age !== 17) {
+          console.error(`lastName is incorrect, it's currently: "${list.age}"`);
+          errored = true;
+        }
+
+        if(list.fullName !== "Carlos Stevenson") {
+          console.error(`lastName is incorrect, it's currently: "${list.fullName}"`);
+          errored = true;
+        }
+        
+        if(list.greeting !== "Hello! My name is Carlos Stevenson and I am 17 years old.") {
+          console.error(`greeting is incorrect, it's currently: "${list.greeting}"`);
+          errored = true;
+        }
+      }
+
+      /*
+      if(!errored && values.testGroup === "a") {
+        console.log("Congrats! Move onto the next step!");
+      } else if (errored && values.testGroup === "a") {
+        console.log("Try again")
+      }
+      */
+
+      if(!errored && list.testGroup === "b") {
+        console.log("Congrats! Move onto the next lesson!");
+      } else if (errored) {
+        console.log("Try again")
+      }
+
+      console.log("\n---------------------------------\n\n")
+    </script>
+  </body>
+</html>

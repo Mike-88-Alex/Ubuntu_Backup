@@ -1,0 +1,32 @@
+installing python3 on ubuntu 20.04
+
+https://www.youtube.com/watch?v=adGa-x3Y-wY
+
+python3.9 -V
+
+which -a python3 (install path)
+/usr/lib/python3.8
+
+
+apt install python3.9
+Check with
+python3.9 -V
+
+AM FACUT
+sudo apt autoremove python3
+
+Uninstal
+
+sudo apt remove <package_name> without <>
+
+
+
+check django version linux
+If you want to check the Django version, open a Python console and type
+
+>>> import django
+>>> django.VERSION
+
+
+2nd yt version
+https://www.youtube.com/watch?v=-HJSyDkM3dE
